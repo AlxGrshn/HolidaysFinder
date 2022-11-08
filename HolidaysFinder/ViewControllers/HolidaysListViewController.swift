@@ -13,23 +13,21 @@ class HolidaysListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 130
-        
     }
-    
-    // MARK: - Table view data source
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         holidays.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        var content = cell.defaultContentConfiguration()
+        guard let cell = cell as? HolidayCell else { return UITableViewCell() }
         let holiday = holidays[indexPath.row]
-        
-        
-//        content.text = person.fullName
-//        cell.contentConfiguration = content
-        
+        cell.configure(with: holiday)
         return cell
     }
+}
+
+extension HolidaysListViewController {
+   
 }

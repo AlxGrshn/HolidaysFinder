@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="GSv-HG-fXy">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="130" id="GSv-HG-fXy">
                                 <rect key="frame" x="0.0" y="50" width="320" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GSv-HG-fXy" id="6gt-57-bEp">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GSv-HG-fXy" id="6gt-57-bEp" customClass="HolidayCell" customModule="HolidaysFinder" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -74,6 +74,12 @@
                                         <constraint firstAttribute="trailing" secondItem="Zaa-2l-8pA" secondAttribute="trailing" constant="15" id="yxn-Un-Hjy"/>
                                         <constraint firstItem="Zaa-2l-8pA" firstAttribute="leading" secondItem="GzV-9e-nPM" secondAttribute="trailing" constant="8" id="zuI-0I-gzH"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="data" destination="FZq-Lk-3I3" id="R2a-8Z-Jy7"/>
+                                        <outlet property="holidayImage" destination="GzV-9e-nPM" id="4Da-I5-kUG"/>
+                                        <outlet property="localName" destination="tZr-pd-BC9" id="2q5-bZ-5kM"/>
+                                        <outlet property="name" destination="Zaa-2l-8pA" id="Uiy-wz-bP5"/>
+                                    </connections>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>

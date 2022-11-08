@@ -6,8 +6,7 @@
 //
 
 struct Holidays: Decodable {
-    let date: String
-    let localName: String
     let name: String
-    let countryCode: String
+    let localName: String
+    let date: String
 }

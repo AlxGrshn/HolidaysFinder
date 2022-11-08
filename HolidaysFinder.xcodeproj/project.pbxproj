@@ -15,6 +15,7 @@
 		08C36A29291AC37E00395CBD /* Holidays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C36A28291AC37E00395CBD /* Holidays.swift */; };
 		08C36A2B291AC38E00395CBD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C36A2A291AC38E00395CBD /* NetworkManager.swift */; };
 		08C36A33291AC6D700395CBD /* HolidaysListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C36A32291AC6D700395CBD /* HolidaysListViewController.swift */; };
+		08C36A35291ADD6100395CBD /* HolidayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C36A34291ADD6100395CBD /* HolidayCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		08C36A28291AC37E00395CBD /* Holidays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holidays.swift; sourceTree = "<group>"; };
 		08C36A2A291AC38E00395CBD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		08C36A32291AC6D700395CBD /* HolidaysListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysListViewController.swift; sourceTree = "<group>"; };
+		08C36A34291ADD6100395CBD /* HolidayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		08C36A11291A8CCB00395CBD /* HolidaysFinder */ = {
 			isa = PBXGroup;
 			children = (
+				08C36A36291ADD6600395CBD /* Views */,
 				08C36A30291AC47000395CBD /* Services */,
 				08C36A2F291AC46A00395CBD /* Models */,
 				08C36A2D291AC45900395CBD /* App */,
@@ -119,6 +122,14 @@
 				08C36A1B291A8CCD00395CBD /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		08C36A36291ADD6600395CBD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				08C36A34291ADD6100395CBD /* HolidayCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +205,7 @@
 			files = (
 				08C36A13291A8CCB00395CBD /* AppDelegate.swift in Sources */,
 				08C36A33291AC6D700395CBD /* HolidaysListViewController.swift in Sources */,
+				08C36A35291ADD6100395CBD /* HolidayCell.swift in Sources */,
 				08C36A2B291AC38E00395CBD /* NetworkManager.swift in Sources */,
 				08C36A29291AC37E00395CBD /* Holidays.swift in Sources */,
 				08C36A15291A8CCB00395CBD /* SceneDelegate.swift in Sources */,
