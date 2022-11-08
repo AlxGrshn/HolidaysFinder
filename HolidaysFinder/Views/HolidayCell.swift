@@ -8,14 +8,14 @@
 import UIKit
 
 class HolidayCell: UITableViewCell {
-    @IBOutlet var name: UILabel!
-    @IBOutlet var localName: UILabel!
-    @IBOutlet var data: UILabel!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var localNameLabel: UILabel!
+    @IBOutlet var dataLabel: UILabel!
     @IBOutlet var holidayImage: UIImageView!
     
     func configure(with holiday: Holidays) {
-        name.text = holiday.name
-        localName.text = holiday.localName
-        data.text = holiday.date
+        nameLabel.text = holiday.name
+        localNameLabel.text = holiday.localName
+        dataLabel.text = holiday.date
     }
 }
