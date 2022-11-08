@@ -13,6 +13,8 @@
 		08C36A1A291A8CCB00395CBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08C36A18291A8CCB00395CBD /* Main.storyboard */; };
 		08C36A1C291A8CCD00395CBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08C36A1B291A8CCD00395CBD /* Assets.xcassets */; };
 		08C36A1F291A8CCD00395CBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08C36A1D291A8CCD00395CBD /* LaunchScreen.storyboard */; };
+		08C36A29291AC37E00395CBD /* Holidays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C36A28291AC37E00395CBD /* Holidays.swift */; };
+		08C36A2B291AC38E00395CBD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C36A2A291AC38E00395CBD /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		08C36A1B291A8CCD00395CBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08C36A1E291A8CCD00395CBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08C36A20291A8CCD00395CBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08C36A28291AC37E00395CBD /* Holidays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holidays.swift; sourceTree = "<group>"; };
+		08C36A2A291AC38E00395CBD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,65 @@
 		08C36A11291A8CCB00395CBD /* HolidaysFinder */ = {
 			isa = PBXGroup;
 			children = (
-				08C36A12291A8CCB00395CBD /* AppDelegate.swift */,
-				08C36A14291A8CCB00395CBD /* SceneDelegate.swift */,
-				08C36A16291A8CCB00395CBD /* ViewController.swift */,
-				08C36A18291A8CCB00395CBD /* Main.storyboard */,
-				08C36A1B291A8CCD00395CBD /* Assets.xcassets */,
-				08C36A1D291A8CCD00395CBD /* LaunchScreen.storyboard */,
-				08C36A20291A8CCD00395CBD /* Info.plist */,
+				08C36A30291AC47000395CBD /* Services */,
+				08C36A2F291AC46A00395CBD /* Models */,
+				08C36A2D291AC45900395CBD /* App */,
+				08C36A2E291AC45F00395CBD /* ViewControllers */,
+				08C36A2C291AC44700395CBD /* StoryBoards */,
+				08C36A31291AC4EB00395CBD /* Resources */,
 			);
 			path = HolidaysFinder;
+			sourceTree = "<group>";
+		};
+		08C36A2C291AC44700395CBD /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				08C36A18291A8CCB00395CBD /* Main.storyboard */,
+				08C36A1D291A8CCD00395CBD /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		08C36A2D291AC45900395CBD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				08C36A12291A8CCB00395CBD /* AppDelegate.swift */,
+				08C36A14291A8CCB00395CBD /* SceneDelegate.swift */,
+				08C36A20291A8CCD00395CBD /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		08C36A2E291AC45F00395CBD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				08C36A16291A8CCB00395CBD /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		08C36A2F291AC46A00395CBD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				08C36A28291AC37E00395CBD /* Holidays.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		08C36A30291AC47000395CBD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				08C36A2A291AC38E00395CBD /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		08C36A31291AC4EB00395CBD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				08C36A1B291A8CCD00395CBD /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +194,8 @@
 			files = (
 				08C36A17291A8CCB00395CBD /* ViewController.swift in Sources */,
 				08C36A13291A8CCB00395CBD /* AppDelegate.swift in Sources */,
+				08C36A2B291AC38E00395CBD /* NetworkManager.swift in Sources */,
+				08C36A29291AC37E00395CBD /* Holidays.swift in Sources */,
 				08C36A15291A8CCB00395CBD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,12 +344,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HolidaysFinder/Info.plist;
+				INFOPLIST_FILE = HolidaysFinder/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,9 +358,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.icandev.HolidaysFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,12 +375,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HolidaysFinder/Info.plist;
+				INFOPLIST_FILE = HolidaysFinder/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,9 +389,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.icandev.HolidaysFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
