@@ -9,25 +9,25 @@
 /* Begin PBXBuildFile section */
 		08C36A13291A8CCB00395CBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C36A12291A8CCB00395CBD /* AppDelegate.swift */; };
 		08C36A15291A8CCB00395CBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C36A14291A8CCB00395CBD /* SceneDelegate.swift */; };
-		08C36A17291A8CCB00395CBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C36A16291A8CCB00395CBD /* ViewController.swift */; };
 		08C36A1A291A8CCB00395CBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08C36A18291A8CCB00395CBD /* Main.storyboard */; };
 		08C36A1C291A8CCD00395CBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08C36A1B291A8CCD00395CBD /* Assets.xcassets */; };
 		08C36A1F291A8CCD00395CBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08C36A1D291A8CCD00395CBD /* LaunchScreen.storyboard */; };
 		08C36A29291AC37E00395CBD /* Holidays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C36A28291AC37E00395CBD /* Holidays.swift */; };
 		08C36A2B291AC38E00395CBD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C36A2A291AC38E00395CBD /* NetworkManager.swift */; };
+		08C36A33291AC6D700395CBD /* HolidaysListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C36A32291AC6D700395CBD /* HolidaysListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		08C36A0F291A8CCB00395CBD /* HolidaysFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HolidaysFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08C36A12291A8CCB00395CBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08C36A14291A8CCB00395CBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		08C36A16291A8CCB00395CBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		08C36A19291A8CCB00395CBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08C36A1B291A8CCD00395CBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08C36A1E291A8CCD00395CBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08C36A20291A8CCD00395CBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08C36A28291AC37E00395CBD /* Holidays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holidays.swift; sourceTree = "<group>"; };
 		08C36A2A291AC38E00395CBD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		08C36A32291AC6D700395CBD /* HolidaysListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 		08C36A2E291AC45F00395CBD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				08C36A16291A8CCB00395CBD /* ViewController.swift */,
+				08C36A32291AC6D700395CBD /* HolidaysListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -192,8 +192,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08C36A17291A8CCB00395CBD /* ViewController.swift in Sources */,
 				08C36A13291A8CCB00395CBD /* AppDelegate.swift in Sources */,
+				08C36A33291AC6D700395CBD /* HolidaysListViewController.swift in Sources */,
 				08C36A2B291AC38E00395CBD /* NetworkManager.swift in Sources */,
 				08C36A29291AC37E00395CBD /* Holidays.swift in Sources */,
 				08C36A15291A8CCB00395CBD /* SceneDelegate.swift in Sources */,

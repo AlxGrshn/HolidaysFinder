@@ -8,7 +8,9 @@
 import Foundation
 
 enum NetworkErrors: Error {
-    
+    case invalidURL
+    case noData
+    case decodingError
 }
 
 class NetworkManager {
