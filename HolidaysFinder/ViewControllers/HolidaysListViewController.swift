@@ -14,7 +14,7 @@ class HolidaysListViewController: UITableViewController {
         super.viewDidLoad()
         tableView.rowHeight = 130
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         holidays.count
     }
@@ -29,5 +29,18 @@ class HolidaysListViewController: UITableViewController {
 }
 
 extension HolidaysListViewController {
-   
+    func fetchHolidays() {
+        guard let url = URL(string: RegionLinks.russia.rawValue) else { return }
+        
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data else {
+                print(error?.localizedDescription ?? "No error description")
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }.resume()
+    }
 }
