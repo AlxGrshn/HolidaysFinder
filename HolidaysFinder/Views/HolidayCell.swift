@@ -17,5 +17,6 @@ class HolidayCell: UITableViewCell {
         nameLabel.text = holiday.name
         localNameLabel.text = holiday.localName
         dataLabel.text = holiday.date
+        holidayImage.image = UIImage(named: "ballons")
     }
 }

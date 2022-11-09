@@ -12,35 +12,44 @@ class HolidaysListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 130
+        fetchHolidays()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         holidays.count
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
+    }
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         guard let cell = cell as? HolidayCell else { return UITableViewCell() }
         let holiday = holidays[indexPath.row]
         cell.configure(with: holiday)
+        
+        cell.layer.cornerRadius = 20
+        cell.layer.borderColor = UIColor.systemBackground.cgColor
+        cell.layer.borderWidth = 5
+        cell.backgroundColor = .systemGray6
+        
         return cell
     }
 }
 
 extension HolidaysListViewController {
-    func fetchHolidays() {
-        guard let url = URL(string: RegionLinks.russia.rawValue) else { return }
-        
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data else {
-                print(error?.localizedDescription ?? "No error description")
-                return
+    private func fetchHolidays() {
+        NetworkManager.shared.fetchHolidays(from: RegionLinks.russia.rawValue) { [weak self] result in
+            switch result {
+            case .success(let data):
+                self?.holidays = data
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
             }
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }.resume()
+        }
     }
 }

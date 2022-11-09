@@ -21,7 +21,7 @@ enum RegionLinks: String {
 class NetworkManager {
     static let shared = NetworkManager()
     
-    func fetchHolidays(from url: String, completion: @escaping(Result<Data, NetworkError>) -> Void) {
+    func fetchHolidays(from url: String, completion: @escaping(Result<[Holidays], NetworkError>) -> Void) {
         guard let url = URL(string: url) else {
             completion(.failure(.invalidURL))
             return
@@ -37,7 +37,7 @@ class NetworkManager {
             do {
                 let holidays = try JSONDecoder().decode([Holidays].self, from: data)
                 DispatchQueue.main.async {
-                    completion(.success(data))
+                    completion(.success(holidays))
                 }
                 print(holidays)
             } catch let error {
