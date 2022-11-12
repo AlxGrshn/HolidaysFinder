@@ -16,6 +16,7 @@
 		08C36A2B291AC38E00395CBD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C36A2A291AC38E00395CBD /* NetworkManager.swift */; };
 		08C36A33291AC6D700395CBD /* HolidaysListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C36A32291AC6D700395CBD /* HolidaysListViewController.swift */; };
 		08C36A35291ADD6100395CBD /* HolidayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C36A34291ADD6100395CBD /* HolidayCell.swift */; };
+		08EEB50E291FE14E007AD9F4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 08EEB50D291FE14E007AD9F4 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08EEB50E291FE14E007AD9F4 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +150,9 @@
 			dependencies = (
 			);
 			name = HolidaysFinder;
+			packageProductDependencies = (
+				08EEB50D291FE14E007AD9F4 /* Alamofire */,
+			);
 			productName = HolidaysFinder;
 			productReference = 08C36A0F291A8CCB00395CBD /* HolidaysFinder.app */;
 			productType = "com.apple.product-type.application";
@@ -176,6 +181,9 @@
 				Base,
 			);
 			mainGroup = 08C36A06291A8CCB00395CBD;
+			packageReferences = (
+				08EEB50C291FE14E007AD9F4 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 08C36A10291A8CCB00395CBD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -432,6 +440,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		08EEB50C291FE14E007AD9F4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		08EEB50D291FE14E007AD9F4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08EEB50C291FE14E007AD9F4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 08C36A07291A8CCB00395CBD /* Project object */;
 }
