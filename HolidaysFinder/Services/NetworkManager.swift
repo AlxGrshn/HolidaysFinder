@@ -39,7 +39,6 @@ class NetworkManager {
                 DispatchQueue.main.async {
                     completion(.success(holidays))
                 }
-                print(holidays)
             } catch let error {
                 print(error.localizedDescription)
             }

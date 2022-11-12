@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class HolidaysListViewController: UITableViewController {
     private var holidays: [Holidays] = []
@@ -40,16 +41,26 @@ class HolidaysListViewController: UITableViewController {
 
 extension HolidaysListViewController {
     private func fetchHolidays() {
-        NetworkManager.shared.fetchHolidays(from: RegionLinks.russia.rawValue) { [weak self] result in
-            switch result {
-            case .success(let data):
-                self?.holidays = data
-                DispatchQueue.main.async {
+        AF.request(RegionLinks.russia.rawValue)
+            .validate()
+            .responseJSON { [weak self] dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    guard let holidays = value as? [[String: Any]] else { return }
+                    
+                    for holiday in holidays {
+                        let holiday = Holidays(
+                            name: holiday["name"] as? String ?? "",
+                            localName: holiday["localName"] as? String ?? "",
+                            date: holiday["date"] as? String ?? ""
+                        )
+                        self?.holidays.append(holiday)
+                    }
+                    
                     self?.tableView.reloadData()
+                case .failure(let error):
+                    print(error)
                 }
-            case .failure(let error):
-                print(error.localizedDescription)
             }
-        }
     }
 }
