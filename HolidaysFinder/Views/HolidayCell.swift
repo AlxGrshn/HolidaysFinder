@@ -13,7 +13,7 @@ class HolidayCell: UITableViewCell {
     @IBOutlet var dataLabel: UILabel!
     @IBOutlet var holidayImage: UIImageView!
     
-    func configure(with holiday: Holidays) {
+    func configure(with holiday: Holiday) {
         nameLabel.text = holiday.name
         localNameLabel.text = holiday.localName
         dataLabel.text = holiday.date

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 enum NetworkError: Error {
     case invalidURL
@@ -21,30 +22,21 @@ enum RegionLinks: String {
 class NetworkManager {
     static let shared = NetworkManager()
     
-    func fetchHolidays(from url: String, completion: @escaping(Result<[Holidays], NetworkError>) -> Void) {
-        guard let url = URL(string: url) else {
-            completion(.failure(.invalidURL))
-            return
-        }
-        
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data else {
-                completion(.failure(.noData))
-                print(error?.localizedDescription ?? "No error description")
-                return
-            }
-            
-            do {
-                let holidays = try JSONDecoder().decode([Holidays].self, from: data)
-                DispatchQueue.main.async {
+    func fetchHolidays(from url: String, completion: @escaping(Result<[Holiday], AFError>) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                   let holidays = Holiday.getHolidays(from: value)
                     completion(.success(holidays))
+                case .failure(let error):
+                    completion(.failure(error))
                 }
-            } catch let error {
-                print(error.localizedDescription)
             }
-            
-        }.resume()
     }
     
     private init() {}
 }
+
+
